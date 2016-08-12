@@ -523,7 +523,7 @@
 			"file": "/D/H5+C3/.gitignore",
 			"settings":
 			{
-				"buffer_size": 12,
+				"buffer_size": 32,
 				"line_ending": "Windows"
 			}
 		}
@@ -784,15 +784,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12,
+						"buffer_size": 32,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								32,
+								32
 							]
 						],
 						"settings":
