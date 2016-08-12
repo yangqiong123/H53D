@@ -1,0 +1,12 @@
+@charset "utf-8";
+*{margin:0;padding:0;}
+.box{width:100px;height:100px;}
+@media (min-width:1024px){
+	.box{background:red;}
+}
+@media (min-width:700px) and (max-width:1024px){
+	.box{background:orange;}
+}
+@media screen and (orientation:landscape) and (max-width:1024px){
+	.box{background:green;}
+}

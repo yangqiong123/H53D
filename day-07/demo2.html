@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas width="800" height="500"></canvas>
+    <script>
+        var c=document.querySelector('canvas');
+        var ctx = c.getContext('2d');
+
+        ctx.beginPath();
+        ctx.fillStyle = "#f00";
+        ctx.arc(150,150,80,0,Math.PI/2,false);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#f00";
+        ctx.arc(150,150,80,Math.PI/2,Math.PI,false);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#f00";
+        ctx.arc(150,150,80,Math.PI,Math.PI/2*3,false);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#f00";
+        ctx.arc(150,150,80,Math.PI/2*3,0,false);
+        ctx.fill();
+        ctx.closePath();
+    </script>
+</body>
+</html>

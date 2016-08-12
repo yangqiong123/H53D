@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变颜色</title>
+</head>
+<body>
+    <canvas width="800" height="800"></canvas>
+    <script>
+        var c=document.querySelector('canvas');
+        var ctx = c.getContext('2d');
+        var lg = ctx.createLinearGradient(0,0,500,500);
+        lg.addColorStop(0,'red');
+        lg.addColorStop(0.2,'pink');
+        lg.addColorStop(0.5,'yellow');
+        lg.addColorStop(1,'green');
+
+        ctx.beginPath();
+        ctx.fillStyle = lg;
+        ctx.fillRect(0,0,500,500);
+        ctx.closePath();
+
+        var lg1 = ctx.createLinearGradient(520,520,700,700);
+        lg1.addColorStop(0,'black');
+        lg1.addColorStop(0.2,'red');
+        lg1.addColorStop(0.5,'blue');
+        lg1.addColorStop(1,'orange');
+
+        ctx.beginPath();
+        ctx.strokeStyle = lg1;
+        ctx.lineWidth = 10;
+        ctx.strokeRect(520,520,180,180)
+        ctx.stroke();
+        ctx.closePath();
+
+
+    </script>
+</body>
+</html>

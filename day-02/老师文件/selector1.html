@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/* a[title*=bc]{ color: red; } */
+/* 		p a{ color: green; }
+p:first-line{ color: red; }
+article:after{ content: '这是after'; }
+article:before{ content: '这是before'; } 
+		
+		table td{ background-color: gray; }
+		table td:empty{ background-color: white; }*/
+
+table{ width: 400px; height: 200px; }
+		h3:nth-of-type(2){ background-color: #eee; }
+		td:only-child{ color: red; }
+		tr + tr{ background-color: #eee; }
+		p:before{ content: url(eg_submit.jpg); }
+		p:after{ content: '哈根达斯'; }
+		li:before{ content: counter(0) }
+	</style>
+</head>
+<body>
+
+	<p lang="zh">
+		<a href="#a1" title="aaaa bc">article</a>
+		<a href="#a2" title="bc">table</a>
+		<a href="#" title="bbc">这是aaaa</a>
+		<a href="#" title="addd">这是aaaa</a>
+		<a href="#" title="ddda">这是aaaa</a>
+	</p>
+
+	<article id="a1">
+		<h2>这是标题</h2>
+		<p>这是段落内容，这是段落内容这是段落内容这是段落内容。<br />这是段落内容，这是段落内容这是段落内容这是段落内容。</p>
+		<div>大规模  大规模 </div>
+		<h3>fdsafdsa</h3>
+		<p>这是段落内容，这是段落内容这是段落内容这是段落内容。<br />这是段落内容，这是段落内容这是段落内容这是段落内容。</p>
+		<h3>dffdsafdsa</h3>
+		<p>这是段落内容，这是段落内容这是段落内容这是段落内容。</p>
+		<div>大规模  大规模 </div>
+	</article>
+
+	<article id="a1">
+		<h2>这是标题</h2>
+		<p>这是段落内容，这是段落内容这是段落内容这是段落内容。<br />这是段落内容，这是段落内容这是段落内容这是段落内容。</p>
+		<div>大规模  大规模 </div>
+		<h3>fdsafdsa</h3>
+		<p>这是段落内容，这是段落内容这是段落内容这是段落内容。<br />这是段落内容，这是段落内容这是段落内容这是段落内容。</p>
+		<h3>dffdsafdsa</h3>
+		<p>这是段落内容，这是段落内容这是段落内容这是段落内容。</p>
+		<div>大规模  大规模 </div>
+	</article>
+
+	<table id="a2">
+		<tr>
+			<td><span>dsafd</span> <a href="#">dfasd</a></td>
+			<td> </td>
+			<td>ddd</td>
+		</tr>
+		<tr>
+			<td>ddd</td>
+			<td>
+				
+			</td>
+			<td>ddd</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>ddd</td>
+			<td>ddd</td>
+		</tr>
+		<tr>
+			<td>ddd</td>
+			<td> </td>
+			<td>ddd</td>
+		</tr>
+		<tr>
+			<td>ddd</td>
+			<td>
+				
+			</td>
+			<td>ddd</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>ddd</td>
+			<td>ddd</td>
+		</tr>
+	</table>
+</body>
+</html>

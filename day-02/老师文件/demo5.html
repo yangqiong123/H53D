@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			input[type="checkbox"]:checked{
+				outline: 3px solid blue;
+			}
+			input[type="checkbox"]:default{
+				outline: 3px solid #f66;
+			}
+			input[type="checkbox"]:indeterminate{
+				outline: 3px solid #f00;
+			}
+			
+			ul li::selection{
+				color: #f66;
+			}
+			p{
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="checkbox" name="hobby" id="hobby" />打球
+		<p>打球打球打球打球打球打球</p>
+		
+		<ul>
+			<li>1111</li>
+			<li>2222</li>
+			<li>3333</li>
+			<li>4444</li>
+			<li>5555</li>
+		</ul>
+		
+	</body>
+</html>

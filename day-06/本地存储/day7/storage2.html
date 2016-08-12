@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>storage2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var jsonData = {
+			a:1,
+			b:'bbb',
+			c:'abc'
+		};
+		var str = JSON.stringify(jsonData);
+		localStorage.setItem('cc','bbbb');
+		localStorage.setItem('c','ccc');
+		localStorage.setItem('d',str);
+		// localStorage.clear();
+/*		for(var i=0,len= localStorage.length; i<len; i++){
+			alert(localStorage.key(i));
+		}*/
+		var jsonStr = localStorage.getItem('d');
+		var jsonObj = JSON.parse(jsonStr);
+
+		alert(jsonObj.c);
+	</script>
+</body>
+</html>

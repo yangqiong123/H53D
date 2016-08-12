@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas3</title>
+	
+</head>
+<body>
+	<canvas width="600" height="600"></canvas>
+
+	
+
+<script type="text/javascript">
+	var c = document.querySelector('canvas'),
+		ctx = c.getContext('2d');
+
+	ctx.beginPath();	
+	ctx.strokeRect(5,5,25,15);
+	ctx.scale(2,2);
+	ctx.strokeRect(5,5,25,15);
+	ctx.rotate(20*Math.PI/180);
+	ctx.scale(2,2);
+	ctx.strokeRect(5,5,25,15);
+	ctx.closePath();
+
+
+</script>
+</body>
+</html>

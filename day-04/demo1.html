@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo1</title>
+	<style>
+		*{padding:0;margin:0;}
+		img{display:block;}
+		div{width:400px;height:400px;transform-style:preserve-3d;perspective:1200px;margin: 50px auto;}
+		div dl{width:100%;height:100%;position:relative;transition:all 0.5s;transform-style:preserve-3d;perspective:1200px;transform:translateZ(-20px);}
+		dt,dd{width:100%;height:100%;position:absolute;left:0;top:0;}
+		img{width:100%;height:100%;}
+		dd{transform:rotateX(-90deg);}
+
+
+		div:hover dl{transform:rotateX(90deg) translateZ(0);}
+	
+	</style>
+</head>
+<body>
+	<div>
+		<dl>
+			<dt><img src="img/pic3.jpg" alt=""></dt>
+			<dd><p>图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片</p></dd>
+		</dl>
+	</div>
+</body>
+</html>

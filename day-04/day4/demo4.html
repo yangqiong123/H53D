@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{ margin: 0; padding: 0; }
+		@keyframes run{
+			0%{
+				background-position: 0 0;
+			}
+			16%{
+				background-position: -180px 0;
+			}
+			32%{
+				background-position: -360px 0;
+			}
+			48%{
+				background-position: -540px 0;
+			}
+			64%{
+				background-position: -720px 0;
+			}
+			80%{
+				background-position: -900px 0;
+			}
+			100%{
+				background-position: -1080px 0;
+			}
+		}
+		.person{
+			width: 180px; height: 300px; margin: 50px auto;
+			background: url(images/charector.png) no-repeat;
+			background-position: 0 0;
+			animation: run .8s step-end infinite;			
+		}
+		.paused{
+			animation-play-state: paused;
+		}
+		.running{
+			animation-play-state: running;
+		}
+	</style>
+</head>
+<body>
+	<div class="person" id="el">
+		
+	</div>
+	<input type="button" value="暂停" id="btnPaused">
+	<input type="button" value="开始" id="btnStart">
+
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		var btnPaused = document.getElementById("btnPaused"),
+			btnStart = document.getElementById("btnStart"),
+			person = document.getElementById("el");
+
+		btnPaused.onclick = function(){
+			$(person).removeClass('running').addClass('paused');
+		}
+		btnStart.onclick = function(){
+			$(person).removeClass('paused').addClass('running');
+		}
+
+
+	</script>
+</body>
+</html>

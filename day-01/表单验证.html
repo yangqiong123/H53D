@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单验证</title>
+	<style>
+		@font-face{
+			font-family:myfont;
+			src:url(font/Sansation_Light.eot),
+			url(font/Sansation_Light.ttf);
+		}
+		h2{font-size:41px;font-family:myfont;color:#CCC;text-shadow:2px 5px 5px yellow;border:1px solid #ccc;box-shadow:5px 5px 5px red inset;width:200px;height:200px;}
+		article{width:260px;height:260px;border:30px solid #ccc;border-image:url(border.png) 26 26 26 round;box-shadow:0 0px 10px 10px yellow inset;margin:30px;}
+	</style>
+</head>
+<body>
+	<article></article>
+	<h2>LOVE</h2>
+	<h3>LOVE</h3>
+	<form action="">
+		我是：<input name="sex" type="radio">男
+		<input name="sex" type="radio">女<br><br>
+		生日：<input name="date" type="date"><br><br>
+		长驻地：<input type="text" list="ads"><br><br>
+		<datalist id="ads">
+			<option value="北京 东城"></option>
+			<option value="湖北 武汉"></option>
+			<option value="上海 浦东"></option>
+			<option value="广东 广州"></option>
+		</datalist>
+		婚姻状况：
+		<input type="radio" name="rel">未婚
+		<input type="radio" name="rel">离异
+		<input type="radio" name="rel">丧偶<br><br>
+		身高：<input type="text"><br><br>
+		学历：<input type="text"><br><br>
+	</form>
+	
+</body>
+</html>

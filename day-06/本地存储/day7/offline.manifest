@@ -1,0 +1,14 @@
+CACHE MANIFEST
+#v1.0
+
+CACHE:
+../css/alipay.css
+images/bg-red.jpg
+images/bg-blue.JPG
+
+NETWORK:
+*
+
+FALLBACK:
+//offline.html
+

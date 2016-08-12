@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<style>
+div[class~="a"] {
+	border: 2px solid #000;
+}
+li:empty{ border:1px solid red; }
+
+
+.nth p:nth-child(odd){color:#066;}
+.nth p:nth-child(even){color:#f00;}
+
+p:only-child{ color:red; }
+</style>
+
+<div class="a">1</div>
+<div class="b">2</div>
+<div class="b a">3</div>
+
+<ul>
+	<li>aaaa</li>
+	<li>bbbb</li>
+	<li>0</li>
+	<li> </li>
+	<li>&nbsp;</li>
+	<li>		
+	</li>
+	<li></li>
+</ul>
+
+<div class="nth">
+	<h2>标题</h2>
+	<p>内容</p>
+	<h2>标题</h2>
+	<p>内容</p>
+	<h2>标题</h2>
+	<p>内容</p>
+	<h2>标题</h2>
+	<p>内容</p>
+</div>
+
+<div class="nth2">
+	<h2>标题2</h2>
+	<p>内容2</p>
+	<h2>标题2</h2>
+	<p>内容2</p>
+	<h2>标题2</h2>
+	<p>内容2</p>
+	<h2>标题2</h2>
+	<p>内容2</p>
+</div>
+<div class="only">
+	<p>dfassfdsa</p>
+</div>
+<div class="only">
+	<p>dfassfdsa</p><p>dfassfdsa</p>
+</div>
+</body>
+</html>

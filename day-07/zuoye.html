@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas width="800" height="500"></canvas>
+    <script>
+        function polygon(c,n,x,y,r,angle,counterclockwise){
+            var angle = angle || 0;
+            var counterclockwise = counterclockwise || false;
+            c.moveTo(x + r*Math.sin(angle), y - r*Math.cos(angle));     //确立第一个点
+            var delta = 2*Math.PI/n;        //相邻两个顶点之间的夹角
+            for(var i=0;i<n;i++){            //其他顶点
+                angle += counterclockwise ? -delta : delta;     //角度调整
+                c.lineTo(x + r*Math.sin(angle), y - r*Math.cos(angle));
+            }
+            c.closePath();      //首位相邻
+        }
+        var c=document.querySelector('canvas');
+        var ctx = c.getContext('2d');
+        ctx.beginPath();
+        polygon(ctx,4,60,200,40);
+        polygon(ctx,4,180,200,40,Math.PI/4);
+        polygon(ctx,6,300,200,40,Math.PI/6);
+        polygon(ctx,12,460,200,40);
+        polygon(ctx,5,620,200,40);
+        ctx.fillStyle = '#f00';
+        ctx.fill();
+    </script>
+</body>
+</html>

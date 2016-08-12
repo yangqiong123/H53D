@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课后作业</title>
+    <style>
+        fieldset{
+            padding:20px;
+        }
+        #tbo{
+            width:500px;
+            height:200px;
+            border-spacing:1px;
+            border:1px solid #ccc;
+        }
+        #tbo td{border:1px solid #ccc;}
+        #tbo td input{
+                border:none;
+                width:100%;
+                height:100%;
+            }
+        #tbo #btn1{cursor:pointer;width:100px;}
+        #conp{border-top:2px solid #dcdcdc;border-bottom:2px solid #dcdcdc;
+            padding:10px 0;}
+    </style>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>客户信息管理网页</legend>
+            <table id="tbo">
+                <tr>
+                    <td>姓名</td>
+                    <td><input type="text" id="username"></td>
+                </tr>
+                <tr>
+                    <td>邮箱</td>
+                    <td><input type="text" id="email"></td>
+                </tr>
+                <tr>
+                    <td>电话</td>
+                    <td><input type="text" id="phone"></td>
+                </tr>
+                <tr>
+                    <td>备注</td>
+                    <td><input type="text" id="remark"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="保存" id="btn1" onclick="add()"></td>
+                </tr>
+            </table>
+            <p id="conp">
+                根据姓名检索信息：<input type="text" id="checkname">
+                <input type="button" id="sear" value="检索" onclick="check()">
+            </p>
+            <div id="div1"></div>
+        </fieldset>
+    </form>
+    <script>
+        var api = {username:'',email:'',phone:'',remark:''}/*,index=0*/;
+        function add(){
+            var jsonstr;
+           /* index++;*/
+            var t=localStorage.length+1;
+            api.username = document.getElementById('username').value;
+            api.email = document.getElementById('email').value;
+            api.phone = document.getElementById('phone').value;
+            api.remark = document.getElementById('remark').value;
+            jsonstr = JSON.stringify(api);
+            localStorage.setItem('index'+t,jsonstr);
+            var inp =document.querySelectorAll('#tbo input');
+            for(var i=0;i<inp.length-1;i++){
+                inp[i].value = '';
+            }
+
+        };
+        function check(){
+            var key,html='',obj;
+            var checkuser = document.getElementById('checkname').value;
+            for(var i=0;i<localStorage.length;i++){
+                key = localStorage.key(i);
+                obj = JSON.parse(localStorage.getItem(key));
+                console.log(obj.username);
+                console.log(checkuser===obj.username);
+                if(obj.username === checkuser){
+                    html += '姓名：'+obj.username +'<br>'+"邮箱："+obj.email+'<br>'+
+                            '电话：'+obj.phone +'<br>'+'备注：'+obj.remark +'<br>';
+                }
+            }
+            document.getElementById('div1').innerHTML = html;
+        }
+
+
+
+
+    </script>
+</body>
+</html>

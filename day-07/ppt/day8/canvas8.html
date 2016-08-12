@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>validte</title>
+</head>
+<body>
+	<input type="number"> <canvas width="100" height="40"></canvas> <input type="button" value="换一张">
+
+<script type="text/javascript">
+	var c = document.querySelector('canvas'),
+		ctx = c.getContext('2d');
+
+	function createText(){
+		var lg = ctx.createLinearGradient(0,0,100,0);
+		lg.addColorStop(0,"yellow");
+		lg.addColorStop(0.2,"#09cdaa");
+		lg.addColorStop(0.35,"red");
+		lg.addColorStop(0.6,"yellow");
+
+		ctx.clearRect(0,0,100,40);
+
+		ctx.beginPath();
+		ctx.strokeStyle = lg;
+		ctx.lineWidth = 1;
+		ctx.font="italic 30px Arial";
+		ctx.strokeText(getRandomNum(),0,30);
+		ctx.closePath();
+	}
+	function getRandomNum(){
+		return (Math.round(Math.random()*10000) + 1000).toString().substr(0,4);
+	}
+	createText();
+	document.querySelector("input[type=button]").addEventListener("click",function(){
+		createText();
+	},true);
+</script>
+</body>
+</html>

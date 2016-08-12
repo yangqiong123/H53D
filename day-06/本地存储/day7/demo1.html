@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo1</title>
+</head>
+<body>
+	<form action="#">
+		<fieldset>
+			<legend>变量</legend>
+			<input type="text" placeholder="请输入您要保存的数据" id="txtVar">
+			<input type="button" value="保存数据" id="btn1" onclick="save1()">
+			<input type="button" value="读取数据" id="btn2" onclick="read1()">
+			<br />
+			<output id="o1"></output>
+		</fieldset>
+		
+		<fieldset>
+			<legend>Session</legend>
+			<input type="text" placeholder="请输入您要保存的数据" id="txtSession">
+			<input type="button" value="保存数据" id="btnSession1" onclick="save2()">
+			<input type="button" value="读取数据" id="btnSession2" onclick="read2()">
+			<br />
+			<output id="o2"></output>
+		</fieldset>
+
+		<fieldset>
+			<legend>Local</legend>
+			<input type="text" placeholder="请输入您要保存的数据" id="txtLocal">
+			<input type="button" value="保存数据" id="btnLocal1" onclick="save3()">
+			<input type="button" value="读取数据" id="btnLocal2" onclick="read3()">
+			<br />
+			<output id="o3"></output>
+		</fieldset>
+	</form>
+	<script type="text/javascript">
+		var v1;
+		function save1(){
+			v1 = document.getElementById("txtVar").value;
+		}
+		function read1(){
+			document.getElementById("o1").value = v1;
+		}
+
+		function save2(){
+			sessionStorage.setItem('txt2', document.getElementById("txtSession").value);
+		}
+		function read2(){
+			document.getElementById("o2").value = sessionStorage.getItem("txt2");
+		}
+
+		function save3(){
+			localStorage.setItem('txt2', document.getElementById("txtLocal").value);
+		}
+		function read3(){
+			document.getElementById("o3").value = localStorage.getItem("txt2");
+		}
+
+	</script>
+</body>
+</html>

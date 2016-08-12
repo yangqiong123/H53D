@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo2</title>
+</head>
+<body>
+	<form action="#">
+		<fieldset>
+			<legend>web留言本</legend>
+			<input type="text" placeholder="姓名"><br/>
+			<textarea name="txt" id="txt" cols="30" rows="10"></textarea>
+			<br />
+			<input type="button" value="添加" onclick="add()">
+			<input type="button" value="查询" onclick="read()">
+			<input type="button" value="初始化" onclick="reseta()">
+		</fieldset>
+		<table id="tbOutput">
+			
+		</table>
+	</form>
+	<script type="text/javascript">
+		var val = {txt:'',time:''},
+			index = 0;
+
+		function add(){
+			var jsonStr,jsonObj;
+			index++;
+			val.txt = document.getElementById("txt").value;
+			val.time = new Date().getTime();
+
+			jsonStr = JSON.stringify(val);
+
+			localStorage.setItem('index'+index, jsonStr);
+		}
+
+		function reseta(){
+			document.getElementById("txt").value='';
+			document.getElementById("tbOutput").innerHTML = " ";
+			localStorage.clear();
+		}
+
+		function read(){
+			var key,html='',obj;
+			for(var i=0,len=localStorage.length;i<len;i++){
+				key = localStorage.key(i);
+				if(key.substr(0,5) === 'index'){
+					obj = JSON.parse(localStorage.getItem(key));
+					html += '<tr><td>'+obj.txt+'</td><td>'+new Date(obj.time)+'</td></tr>';
+				}
+			}
+
+			document.getElementById("tbOutput").innerHTML = html;
+		}
+
+
+
+	</script>
+</body>
+</html>

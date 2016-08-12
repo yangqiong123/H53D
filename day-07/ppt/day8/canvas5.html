@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>line</title>
+</head>
+<body>
+	<canvas width="600" height="600"></canvas>
+<script type="text/javascript">
+	var c = document.querySelector('canvas'),
+		ctx = c.getContext('2d');
+
+	ctx.beginPath();
+	ctx.fillStyle = "blue";
+	ctx.strokeStyle = "red";
+	ctx.lineWidth = 2;
+	ctx.moveTo(10,10);
+	ctx.lineTo(200,200);
+	ctx.lineTo(500,50);
+	ctx.lineTo(10,10);
+	ctx.stroke();
+	ctx.fill();
+	ctx.closePath();
+
+function drawY(x){
+	ctx.beginPath();
+	ctx.strokeStyle = "#eee";
+	ctx.lineWidth = 0.5;
+	ctx.moveTo(x,0);
+	ctx.lineTo(x,c.height);
+	ctx.stroke();
+	ctx.closePath();
+}
+	for(var i=0;i<c.width;i+=10){
+		drawY(i);
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>radiant</title>
+</head>
+<body>
+	<canvas width="600" height="600"></canvas>
+<script type="text/javascript">
+	var c = document.querySelector('canvas'),
+		ctx = c.getContext('2d');
+
+	var rg = ctx.createRadialGradient(50,50,50,200,200,100);
+	rg.addColorStop(0,"yellow");
+	rg.addColorStop(0.2,"#09cdaa");
+	rg.addColorStop(0.35,"red");
+	rg.addColorStop(0.6,"yellow");
+
+	ctx.beginPath();
+	ctx.fillStyle = rg;
+	ctx.rect(0,0,c.width/2,c.height/2);
+	ctx.fill();
+	ctx.closePath();
+
+</script>
+
+</body>
+</html>

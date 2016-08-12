@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>beizer</title>
+</head>
+<body>
+	<canvas width="600" height="600"></canvas>
+<script type="text/javascript">
+	var c = document.querySelector('canvas'),
+		ctx = c.getContext('2d');
+
+	ctx.beginPath();
+	ctx.strokeStyle = "blue";
+	ctx.moveTo(10,200);
+	ctx.quadraticCurveTo(100,20,200,200);
+	ctx.moveTo(376,495);
+	ctx.bezierCurveTo(416,423,526,421,546,508);
+	ctx.stroke();
+
+	ctx.closePath();
+</script>
+</body>
+</html>

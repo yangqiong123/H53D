@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{ margin: 0; padding: 0; }
+		@keyframes myfirst{
+			0%   {transform: translateZ(0) rotateX(0deg);}
+			25%   {transform: translateZ(0) rotateX(90deg);}
+			50%   {transform: translateZ(0) rotateX(180deg);}
+			75%{transform: translateZ(0) rotateX(270deg);}
+			100% {transform: translateZ(0) rotateX(360deg);}
+		}
+
+		.products{ width: 1024px; height: 400px; margin: 30px auto; }
+		.products dl{ width: 200px; height: 100px; display: inline-block; margin: 0 10px; cursor: pointer; position: relative;
+		perspective: 1200px; transform-style: preserve-3d; transition: transform 0.6s; 
+		animation: myfirst 1.6s 5;
+		}
+		.products dt,.products dd{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 1px solid red; }
+		.products img{ width: 100%; height: 100%; display: block; }
+		.products dd{ border-color: green; transform: rotateX(-90deg);}
+		.products dt{ transform: translateZ(50px); }
+
+		/* .products dl:hover{ transform: translateZ(-50px) rotateX(90deg); } */
+
+		
+
+	</style>
+</head>
+<body>
+	<div class="products">
+		<dl>
+			<dt> <img src="images/image01.jpg" alt=""> </dt>
+			<dd> <p>这是一个美女</p> </dd>
+		</dl>
+
+		<dl>
+			<dt> <img src="images/image01.jpg" alt=""> </dt>
+			<dd> <p>这是一个美女</p> </dd>
+		</dl>
+
+		<dl>
+			<dt> <img src="images/image01.jpg" alt=""> </dt>
+			<dd> <p>这是一个美女</p> </dd>
+		</dl>
+	</div>
+</body>
+</html>

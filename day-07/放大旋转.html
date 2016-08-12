@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大旋转</title>
+</head>
+<body>
+<canvas width="1800" height="1500"></canvas>
+    <script>
+        var c=document.querySelector('canvas');
+        var ctx = c.getContext('2d');
+        ctx.beginPath();
+        ctx.strokeStyle = "#000";
+        ctx.lineWidth = 8;
+       /* ctx.strokeRect(100,100,200,200);*/
+        ctx.scale(2,2);
+        ctx.rotate(15*Math.PI/180);
+        ctx.strokeRect(100,100,200,200);
+        ctx.closePath();
+
+
+    </script>
+
+</body>
+</html>

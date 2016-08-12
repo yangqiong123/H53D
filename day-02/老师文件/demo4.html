@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/demo4.css"/>
+	</head>
+	<body>
+	<!--	<ul class="oUl">
+			<li>11111</li>
+		</ul>
+		<ul class="oUl">
+			<li>22222</li>
+			<li>33333</li>
+			<li>444444</li>
+			<li>55555555</li>
+			<li>66666666</li>
+		</ul>-->
+		<form >
+			<input type="text" name="userName" id="userName" value="" />
+			<input type="radio" name="radio" id="radio" value="" />
+			<input type="checkbox" name="hobby" id="hobby" value="" />
+		</form>
+		<form>
+		<input type="radio" id="radio1" name="radio" 
+		 onchange="radio_onchange();">可用</radio>
+		<input type="radio" id="radio2" name="radio" 
+		onchange="radio_onchange();">不可用</radio><br/>
+		<input type=text id="text1" disabled />
+	</form>
+	<input type="text" name="userName" id="userName" value="" placeholder="请输入姓名"/>
+	<br><input type="tel" name="tel" id="tel" value="" placeholder="请输入手机号码"/>
+	<br><input type="text" name="address" id="address" value="上海市" readonly="readonly"/>
+	<br><input type="text" name="a" id="a" value="" placeholder="详细地址"/>
+	</body>
+	<script type="text/javascript">
+		function radio_onchange()
+	{    
+		var radio=document.getElementById("radio1");
+		var text=document.getElementById("text1");
+		if(radio.checked)
+			text.disabled="";
+		else
+		{
+			text.value="";
+			text.disabled="disabled";
+		}
+	}
+	</script>
+</html>

@@ -1,0 +1,54 @@
+*{ margin: 0; padding: 0;}
+ul,li{ list-style: none;}
+
+header>div,.banner,.list li,.list2 li{background-color: #ccc;}
+.banner{ width: 100%; height: 300px; background-color: #ccc; margin: 10px auto;}
+
+@media (min-width:1024px){
+	.wrap{ width: 1000px; margin:0 auto;}
+	header{ width: 1000px; height: 100px; margin: 0 auto;}
+	header div{ width: 50%; height: 100%;  float: left; box-sizing: border-box; }
+	header div:first-child{ border-right: 5px solid #fff;}
+
+	.list{ width: 1000px; height: 250px; margin: 0 auto; display: -moz-box; 
+			display: -webkit-box; 
+			display: box;
+			-moz-box-align: stretch;
+			-webkit-box-align: stretch;
+			box-align: stretch;
+		}
+	.list li{-moz-box-flex:1; /* Firefox */
+		-webkit-box-flex:1; /* Safari and Chrome */
+		box-flex:1;
+	}
+	.list li:nth-child(2){margin: 0 10px;}
+
+
+	.list2{ width: 1000px; height: 250px; margin: 20px auto; display: -moz-box; 
+			display: -webkit-box; 
+			display: box;
+			-moz-box-align: stretch;
+			-webkit-box-align: stretch;
+			box-align: stretch;
+		}
+	.list2 li{-moz-box-flex:1; /* Firefox */
+		-webkit-box-flex:1; /* Safari and Chrome */
+		box-flex:1;
+		margin-right:10px;
+	}
+	.list2 li:last-child{margin: 0 0;}
+}
+
+@media (max-width:1024px) and (min-width:768px){
+	.wrap{ width: 100%; }
+	header{ width: 100%; margin: 0 auto;}
+	header div{ width: 100%; height: 100px;  box-sizing: border-box; }
+	header div:first-child{ margin-bottom: 10px;}
+
+	.list{ margin: 10px 0; }
+	.list li{height: 80px; width: 100%; margin-bottom: 10px;}
+
+	.list2{ margin: 10px 0; width: 100%; }
+	.list2 li{height: 80px; width: 50%; float: left; box-sizing: border-box; border-bottom: 10px solid #fff;}
+	.li1,.li3{ border-right: 10px solid #fff;}
+}

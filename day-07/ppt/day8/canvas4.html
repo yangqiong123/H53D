@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas4</title>
+	<style type="text/css">
+		.box{ width: 300px; height: 300px; box-shadow: 5px 5px 10px 1px #333; }
+	</style>
+</head>
+<body>
+<!-- 	<div class="box">
+</div> -->
+	<canvas width="600" height="600"></canvas>
+<script type="text/javascript">
+	var c = document.querySelector('canvas'),
+		ctx = c.getContext('2d');
+
+	ctx.globalCompositeOperation = "copy";
+	ctx.beginPath();
+	ctx.fillStyle = "red";
+	ctx.shadowColor = "#333";
+	ctx.shadowBlur = 10;
+	ctx.shadowOffsetX = 5;
+	ctx.shadowOffsetY = 5;
+	ctx.fillRect(50,50,300,300);
+	ctx.closePath();
+
+	ctx.beginPath();
+	ctx.fillStyle = "blue";
+	ctx.arc(350,350,100,0,Math.PI*2,false);
+	ctx.fill();
+	ctx.closePath();
+
+
+</script>
+</body>
+</html>

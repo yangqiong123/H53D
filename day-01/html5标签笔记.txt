@@ -1,0 +1,17 @@
+<header> 头标签      header.html		header_noLogin.html<nav> 导航标签<article>文章标签<aside> 侧边栏导航<footer>页脚        footer.html<section> 章节、页眉、栏目
+
+
+ 1）section  表示内容区块,一般入章节、页眉、页脚或者页面中的其他部分。可以与h1-h6等元素结合起来使用，标示文档的结构
+<section></section>
+
+
+ 2）article表示页面中的一块与上下文不相关的独立内容，譬如博客中的一篇文章或者报纸中的一篇文章<article></article>
+ 3）asideAside表示acticle元素的内容之外的，与article元素的内容相关的辅助信息。<aside></aside>
+ 4）header表示页面中一个内容区块或者整个页面的标题<header></header>
+ 5）footer表示整个页面或者页面中的一个内容区块的脚注。一般来说，他会包含创作者的姓名、创作日期以及创作者联系信息。<footer></footer>
+ 6）nav表示页面中导航链接的部分<nav></nav>
+
+ 7）figure表示一段独立的流内容，一般表示文档主体流内容中的一个独立单元。使用figcaption元素为figure元素添加标题。
+ 3）mark高亮显示文字，一个比较典型的应用就是在搜索结果中向用户高亮显示搜索关键词。<mark></mark>
+
+ 5）Datalist 

@@ -1,0 +1,53 @@
+*{margin: 0; padding: 0;}
+img{display: block;}
+
+figure{ width: 33.33%; /* height: 300px; */ position: relative; float: left; overflow: hidden; }
+figure img{ width: 100%; transition:all 0.8s; }
+figure figcaption{ position: absolute; top:35%; left: 15%; width: 70%; height: 50%;}
+figure h2,figure p{color: #fff; transition:all 0.8s;}
+figure p{ position: absolute; bottom: -200px;}
+figure:hover img{ transform:translateX(-5%); opacity: 0.5; }
+
+.demo1:hover h2{ transform:translateY(-10px);}
+.demo1:hover p{ bottom: 10%;}
+
+
+.demo2 figcaption{ top:20%; }
+.demo2 p:nth-of-type(1),.demo2 p:nth-of-type(2),.demo2 p:nth-of-type(3){ position: absolute; top:20%; left: 10%; height: 20px;transform:translateX(-200px);}
+.demo2 p:nth-of-type(2){ top:40%; }
+.demo2 p:nth-of-type(3){ top:60%; }
+.demo2:hover p:nth-of-type(1),.demo2:hover p:nth-of-type(2),.demo2:hover p:nth-of-type(3){ transform:translateX(0);}
+.demo2:hover p:nth-of-type(2){transition:all 0.8s ease 0.3s; transform:translateX(20%);}
+.demo2:hover p:nth-of-type(3){transition:all 0.8s ease 0.6s; transform:translateX(40%);}
+
+.demo3 p{ position: absolute; bottom:0; left: 0; font-size: 16px; line-height: 24px; height: 72px; overflow: hidden; transform:translateY(48px);}
+.demo3:hover p{ transform:translateY(0); }
+
+
+.demo4 div{ position: absolute; left: 0; bottom: -200px; width: 800px; height: 200px; transition:all 0.4s; background-color: #fff; z-index: 10; }
+.demo4:hover div{ transform:rotate(-10deg); transform-origin:left top;}
+.demo4 span{ position: absolute;right: 60px; bottom: -60px; z-index: 100;transition:all 0.4s;  }
+.demo4 span:nth-child(2){ right: 30px;}
+.demo4:hover span{ bottom:-20px; }
+
+.demo5 div{ width: 60%; height: 60%; position: absolute; left: 20%; top:-62%; border: 1px solid red; transition:all 0.5s;}
+.demo5:hover div{transform:rotate(360deg) translateY(140%); /* top:20%; */}
+.demo5 figcaption{ transition:all 0.5s; }
+.demo5 p{ color: #fff; position: relative; top:0; left: 0;}
+.demo5:hover figcaption{transform:translateX(10%);}
+
+.demo6 p{ position: relative; left: 0; top:0; }
+.demo6 p,.demo6 h2{transform:skewX(90deg); transition:all 0.5s;}
+.demo6:hover p,.demo6:hover h2{ transform:none;}
+
+.demo7 img:nth-of-type(1){ position: static; width: 100%; visibility: hidden;}
+.demo7 div{ transition:transform 0.5s; position: absolute; left: 5%; top:5%; width: 90%; height: 90%; border: 1px solid #fff;}
+.demo7 .ab{ width: 120%; height: 120%; position: absolute; left:-10%; top:-10%; }
+.demo7:hover .ab{/* width: 100%; height: 100%; position: absolute; left:0; top:0; */ transform:scale(0.83333);}
+.demo7:hover div,.demo7:hover h2,.demo7:hover p{transform:scale(0.83333);}
+
+.demo8 div{ position: absolute; border: 1px solid #fff; transition:all 0.5s; }
+.demo8 div:nth-of-type(1){ width: 70%; height: 60%; left:15%; top: 20%; border-left:none; border-right: none; transform:scaleX(0);}
+.demo8 div:nth-of-type(2){ width: 60%; height: 80%; left:20%; top: 10%; border-top:none; border-bottom: none; transform:scaleY(0);}
+.demo8:hover div{ transform:none;}
+.demo8:hover h2{ transform:translateX(10%);}

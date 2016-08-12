@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bezier</title>
+</head>
+<body>
+    <canvas width="800" height="500"></canvas>
+    <script>
+        var c=document.querySelector('canvas');
+        var ctx = c.getContext('2d');
+        ctx.beginPath();
+        ctx.strokeStyle = "blue";
+        ctx.lineWidth = 5;
+        ctx.arc(100,100,80,120*Math.PI/180,0,false);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle = "blue";
+        ctx.lineWidth = 5;
+        ctx.arc(300,100,80,0,250*Math.PI/180,false);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle = "blue";
+        ctx.lineWidth = 5;
+        ctx.arc(500,100,80,0,360*Math.PI/180,false);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#f00";
+        ctx.arc(100,300,80,0,Math.PI/2,false);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#f00";
+        ctx.arc(300,300,80,Math.PI/2*3,0,false);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#f00";
+        ctx.arc(500,300,80,0,Math.PI*2,false);
+        ctx.fill();
+        ctx.closePath();
+
+
+
+    </script>
+</body>
+</html>

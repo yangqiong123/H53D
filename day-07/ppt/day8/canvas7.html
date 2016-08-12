@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>liner</title>
+</head>
+<body>
+	<canvas width="600" height="600"></canvas>
+<script type="text/javascript">
+	var c = document.querySelector('canvas'),
+		ctx = c.getContext('2d');
+
+	var lg = ctx.createLinearGradient(0,0,c.width/3,c.height/3);
+	lg.addColorStop(0,"blue");
+	lg.addColorStop(0.25,"pink");
+	lg.addColorStop(0.5,"red");
+	lg.addColorStop(0.9,"orange");
+	lg.addColorStop(1,"yellow");
+
+	ctx.beginPath();
+	ctx.fillStyle = lg;
+	ctx.rect(0,0,c.width/3,c.height/3);
+	ctx.fill();
+	ctx.closePath();
+
+	var lg = ctx.createLinearGradient(300,300,500,500);
+	lg.addColorStop(0,"black");
+	lg.addColorStop(0.25,"pink");
+	lg.addColorStop(0.5,"yellow");
+	lg.addColorStop(0.9,"orange");
+	lg.addColorStop(1,"white");
+
+	ctx.beginPath();
+	ctx.strokeStyle = lg;
+	ctx.lineWidth = 10;
+	ctx.strokeRect(300,300,200,200);
+	ctx.closePath();
+	
+	var lg = ctx.createLinearGradient(0,400,100,400);
+	lg.addColorStop(0,"black");
+	lg.addColorStop(0.25,"pink");
+	lg.addColorStop(0.5,"yellow");
+	lg.addColorStop(0.9,"orange");
+	lg.addColorStop(1,"white");
+	ctx.beginPath();
+	ctx.strokeStyle = lg;
+	ctx.lineWidth = 3;
+	ctx.font="italic 40px Arial";
+	ctx.strokeText("Hello World",0,400);
+	ctx.closePath();
+
+
+
+</script>
+</body>
+</html>

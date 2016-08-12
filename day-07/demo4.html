@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+</head>
+<body>
+    <canvas width="1800" height="1500"></canvas>
+    <script>
+        var c=document.querySelector('canvas');
+        var ctx = c.getContext('2d');
+
+
+        ctx.beginPath();
+        ctx.fillStyle = "red";
+        ctx.strokeStyle = "blue";
+        ctx.lineWidth = "10"
+        ctx.moveTo(100,50);
+        ctx.lineTo(400,50);
+        ctx.lineTo(500,300);
+        ctx.lineTo(20,300);
+        ctx.lineTo(100,50);
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+
+
+
+       /* ctx.beginPath();
+        ctx.globalCompositeOperation = "";
+        ctx.fillStyle = "#f00";
+        ctx.fillRect(50,50,200,200)
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.fillStyle = "blue";
+        ctx.moveTo(300,300)
+        ctx.arc(300,300,200,0,2*Math.PI,false);
+        ctx.fill();
+        ctx.closePath();*/
+    </script>
+</body>
+</html>

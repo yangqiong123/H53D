@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{width:1000px;height:600px;margin:20px auto;background-color:#000;overflow:hidden;position:relative;}
+		.box p{position:absolute;color:#fff;width:80px;}
+		.box p:nth-child(1){top:10%;right:-10%;animation:2s run infinite linear;color:red;}
+		.box p:nth-child(2){top:20%;right:-10%;animation:5s run infinite linear;color:blue;}
+		.box p:nth-child(3){top:30%;right:-10%;animation:8s run infinite linear;color:green;}
+		.box p:nth-child(4){top:40%;right:-10%;animation:4s run infinite linear;color:#ff0000;}
+		@keyframes run{
+			0%{right:0;}
+			100%{right:120%;}
+		}
+		
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p>老王HAHAHA</p>
+		<p>苍老师</p>
+		<p>嗯嗯嗯嗯</p>
+		<p>哈哈哈哈哈</p>
+
+	</div>
+</body>
+</html>
